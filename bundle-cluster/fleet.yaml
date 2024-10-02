@@ -1,4 +1,4 @@
 namespace: default
 helm:
-  chart: oci://registry:5000/test-chart
+  chart: oci://registry.default:5000/test-chart
   version: 0.1.0
