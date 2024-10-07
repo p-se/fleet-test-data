@@ -1,4 +1,4 @@
 namespace: default
 helm:
-  chart: oci://registry.default:5000/charts/test-chart
-  version: 0.1.0
+  chart: oci://chartproxy.container-registry.com/charts.jetstack.io/cert-manager
+  version: 1.11.2
