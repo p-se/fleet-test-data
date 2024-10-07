@@ -1,4 +1,4 @@
-namespace: default
+defaultNamespace: default
 helm:
   chart: oci://chartproxy.container-registry.com/charts.jetstack.io/cert-manager
   version: 1.11.2
