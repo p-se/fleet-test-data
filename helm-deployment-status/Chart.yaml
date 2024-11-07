@@ -1,5 +1,0 @@
-apiVersion: v2
-name: test-display
-description: Sample application to test status display for slow deployments
-version: 0.0.0
-appVersion: 0.0.0
