@@ -1,0 +1,16 @@
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: reproducer
+  namespace: fleet-default
+spec:
+  repo: https://github.com/p-se/fleet-test-data
+  paths:
+  - reproducer
+
+  # Target clusters to deploy to if running Fleet in a multi-cluster
+  # style. Refer to the "Mapping to Downstream Clusters" docs for
+  # more information.
+  # If empty, the "default" cluster group is used.
+  #
+  # targets: ...
