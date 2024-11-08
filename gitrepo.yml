@@ -7,7 +7,7 @@ spec:
   repo: https://github.com/p-se/fleet-test-data
   branch: SURE-9137
   paths:
-  - reproducer
+  - .
 
   # Target clusters to deploy to if running Fleet in a multi-cluster
   # style. Refer to the "Mapping to Downstream Clusters" docs for
