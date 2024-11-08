@@ -30,20 +30,20 @@ helm:
   chart: ""
 
 
-  ### These options only work for helm-type bundles.
-  #
-  # Any values that should be placed in the `values.yaml` and passed to helm
-  # during install.
-  values:
+  # ### These options only work for helm-type bundles.
+  # #
+  # # Any values that should be placed in the `values.yaml` and passed to helm
+  # # during install.
+  # values:
 
-    # All labels on Rancher clusters are available using
-    # global.fleet.clusterLabels.LABELNAME These can now be accessed directly as
-    # variables The variable's value will be an empty string if the referenced
-    # cluster label does not exist on the targeted cluster.
-    variableName: global.fleet.clusterLabels.LABELNAME
+  #   # All labels on Rancher clusters are available using
+  #   # global.fleet.clusterLabels.LABELNAME These can now be accessed directly as
+  #   # variables The variable's value will be an empty string if the referenced
+  #   # cluster label does not exist on the targeted cluster.
+  #   variableName: global.fleet.clusterLabels.LABELNAME
 
-    # See Templating notes below for more information on templating.
-    templatedLabel: "${ .ClusterLabels.LABELNAME }-foo"
+  #   # See Templating notes below for more information on templating.
+  #   templatedLabel: "${ .ClusterLabels.LABELNAME }-foo"
 
 
   ### These options control how fleet-agent deploys the bundle, they also apply
