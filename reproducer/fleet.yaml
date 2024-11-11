@@ -43,7 +43,10 @@ helm:
     # variableName: global.fleet.clusterLabels.LABELNAME
 
     # See Templating notes below for more information on templating.
-    templatedLabel: "${ .ClusterName }-foo"
+    # templatedLabel: "${ .ClusterName }-foo"
+    # See Templating notes below for more information on templating.
+    templatedLabel: "${ .ClusterLabels.foo }-foo"
+
 
 
   ### These options control how fleet-agent deploys the bundle, they also apply
