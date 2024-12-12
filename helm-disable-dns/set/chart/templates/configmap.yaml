@@ -1,6 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: hosts-config
-data:
-  host: {{ .Values.host | getHostByName | required "DNS is not enabled" }}
