@@ -4,23 +4,23 @@ helm:
   releaseName: web
 
 targetCustomizations:
-- name: dev
+- name: a
   helm:
     chart: https://charts.bitnami.com/bitnami/nginx-15.4.4.tgz
   clusterSelector:
     matchLabels:
       example.com/cluster: dev
 
-- name: prod
+- name: b
   helm:
     chart: https://charts.bitnami.com/bitnami/nginx-15.4.4.tgz
   clusterSelector:
     matchLabels:
       example.com/cluster: prod
 
-- name: dr
+- name: c
   helm:
     chart: https://hostname-only-valid-here.example.com/nginx-15.4.4.tgz
   clusterSelector:
     matchLabels:
-      example.com/cluster: dr
+      example.com/cluster: broken
