@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sure-7399
+  name: sure-7399-c
   namespace: default
   labels:
-    app: sure-7399
+    app: sure-7399-c
 spec:
   selector:
     matchLabels:
-      app: sure-7399
+      app: sure-7399-c
   replicas: 1
   strategy:
     rollingUpdate:
@@ -18,14 +18,14 @@ spec:
   template:
     metadata:
       labels:
-        app: sure-7399
+        app: sure-7399-c
     spec:
       # initContainers:
       # Init containers are exactly like regular containers, except:
       # - Init containers always run to completion.
       # - Each init container must complete successfully before the next one starts.
       containers:
-        - name: sure-7399
+        - name: sure-7399-c
           image: nginx:latest
           resources:
             requests:
@@ -55,11 +55,11 @@ spec:
             - name: DB_HOST
               valueFrom:
                 configMapKeyRef:
-                  name: sure-7399
+                  name: sure-7399-c
                   key: DB_HOST
           ports:
             - containerPort: 80
-              name: sure-7399
+              name: sure-7399-c
           volumeMounts:
             - name: localtime
               mountPath: /etc/localtime
