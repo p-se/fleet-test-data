@@ -1,0 +1,12 @@
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: sure-7399-derivative
+  namespace: fleet-local
+spec:
+  repo: https://github.com/p-se/fleet-test-data
+  branch: SURE-7399
+  paths:
+    - reproducer/derivative/a
+    - reproducer/derivative/b
+    - reproducer/derivative/c
