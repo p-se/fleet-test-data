@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-kubectl patch clusters.fleet.cattle.io -n fleet-default downstream \
+kubectl patch clusters.fleet.cattle.io -n fleet-default downstream1 \
     --type='json' -p='[{"op": "replace", "path": "/metadata/labels/foo", "value": "one"}]'
 kubectl delete -f gitrepo.yaml
 kubectl apply -f gitrepo.yaml
