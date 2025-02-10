@@ -1,0 +1,4 @@
+defaultNamespace: cattle-monitoring-system
+helm:
+  releaseName: monitoring-test8
+
