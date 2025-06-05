@@ -8,5 +8,3 @@ spec:
   branch: SURE-8849
   paths:
     - reproducer/data-update
-  helm:
-    takeOwnership: true
