@@ -1,0 +1,10 @@
+kind: Data
+apiVersion: crd.com/v1
+metadata:
+  name: crd-test
+  namespace: default
+  labels:
+    test: adopt
+spec:
+  color: blue
+  size: large

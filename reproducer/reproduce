@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+if [[ "$1" == "uninstall" ]]; then
+    helm uninstall crd-and-data
+    helm uninstall data-update
+    kubectl delete -n default data crd-test
+    exit 0
+fi
+
+# Install CRD and CR.
+helm install crd-and-data crd-and-data
+# Remote helm release for crd-and-data. This is what `keepResources: true` does
+# in Fleet when a GitRepo is removed.
+kubectl delete secret sh.helm.release.v1.crd-and-data.v1
+# Verify resource exists.
+kubectl get datas.crd.com -n default crd-test -o yaml
+
+helm install --take-ownership data-update data-update
+
+# verify resource has been adopted with its data
+kubectl get datas.crd.com -n default crd-test -o yaml
