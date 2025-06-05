@@ -1,0 +1,12 @@
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: data-update
+  namespace: fleet-local
+spec:
+  repo: https://github.com/p-se/fleet-test-data
+  branch: SURE-8849
+  paths:
+    - reproducer/data-update
+  helm:
+    takeOwnership: true
