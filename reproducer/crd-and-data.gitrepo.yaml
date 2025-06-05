@@ -8,3 +8,4 @@ spec:
   branch: SURE-8849
   paths:
     - reproducer/crd-and-data
+  keepResources: true
