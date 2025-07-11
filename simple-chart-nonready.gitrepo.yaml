@@ -1,0 +1,10 @@
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: my-repo
+  namespace: fleet-local
+spec:
+  repo: https://github.com/p-se/fleet-test-data
+  paths:
+  - simple-chart-nonready
+
