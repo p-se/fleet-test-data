@@ -26,7 +26,7 @@ spec:
           # - Init containers always run to completion.
           # - Each init container must complete successfully before the next one starts.
       containers:
-      - name: 
+      - name: foo
         image: nginx
         imagePullPolicy: IfNotPresent
         resources:
