@@ -1,5 +1,5 @@
 helm:
   chart: nonready-chart
-  values:
-    name: example-value
+  # values:
+  #   name: example-value
   # takeOwnership: true

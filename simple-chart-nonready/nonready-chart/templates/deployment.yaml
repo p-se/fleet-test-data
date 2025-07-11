@@ -2,10 +2,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: 
+  name: foo
   namespace: default
-  labels:
-    app: 
 spec:
   selector:
     matchLabels:
