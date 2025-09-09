@@ -5,6 +5,6 @@ metadata:
   namespace: fleet-local
 spec:
   repo: https://github.com/p-se/fleet-test-data.git
-  branch: master
+  branch: repro-issue-3866
   paths:
   - chart-progressDeadlineSeconds
