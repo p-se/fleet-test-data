@@ -1,0 +1,52 @@
+# https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test
+  namespace: default
+  labels:
+    app: test
+spec:
+  progressDeadlineSeconds: 1
+  selector:
+    matchLabels:
+      app: test
+  replicas: 1
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations:
+        kubectl.kubernetes.io/default-container:  test
+      labels:
+        app: test
+    spec:
+      # initContainers:
+        # Init containers are exactly like regular containers, except:
+          # - Init containers always run to completion.
+          # - Each init container must complete successfully before the next one starts.
+      containers:
+      - name: test
+        image: nginx:latest
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+          limits:
+            cpu: 100m
+            memory: 100Mi
+        ports:
+        - containerPort: 80
+          name: test
+        readinessProbe:
+          httpGet:
+            port: 80
+            path: /asdf
+          failureThreshold: 1
+      restartPolicy: Always
+---
+

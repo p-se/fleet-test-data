@@ -1,0 +1,10 @@
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: issue-3866
+  namespace: fleet-local
+spec:
+  repo: https://github.com/p-se/fleet-test-data.git
+  branch: master
+  paths:
+  - chart-progressDeadlineSeconds
