@@ -1,0 +1,3 @@
+helm:
+  chart: git@github.com:p-se/fleet-test-data.git//simple-chart/config-chart
+  releaseName: test-helm-chart-proxy
