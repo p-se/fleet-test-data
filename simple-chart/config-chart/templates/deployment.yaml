@@ -6,6 +6,9 @@ spec:
   selector:
     matchLabels:
       app: drift-test
+  strategy:
+    type: RollingUpdate
+    rollingUpdate: ~        # explicit null — Helm v4 style: server defaults this to {maxSurge: 25%, maxUnavailable: 25%}
   template:
     metadata:
       labels:
