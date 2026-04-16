@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: drift-test
+spec:
+  selector:
+    matchLabels:
+      app: drift-test
+  template:
+    metadata:
+      labels:
+        app: drift-test
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:stable-alpine
